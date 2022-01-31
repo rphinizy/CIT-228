@@ -1,0 +1,38 @@
+print("---------------------- Hands On #1 -----------------------------")
+foods=["Tomato","Pommegranate","Cheesecake","Grapefruit"]
+print("Favorite Foods:" , foods)
+numbers=[99,83,42,24,16,7]
+print("Favorite Numbers:" , numbers)
+movies=["Never Ending Story","Goonies","Land Before Time"]
+print("Favorite Movies:" , movies)
+mixed=["Cheesecake","Pommegranate",24,42,"Goonies","Land Before Time"]
+print("Mixed List:" , mixed)
+print("Last Food item:",foods[-1])
+print("2nd, 4th and 6th numbers:",numbers[1], numbers[3],numbers[5])
+print("All movies:",movies[0],movies[1],movies[2])
+print("Firsts from lists:",foods[0],numbers[0],movies[0])
+print("---------------------- Hands On #2 -----------------------------")
+movies.append("Princess Bride")
+print("Movies Appended:" , movies)
+numbers.insert(3, 39)
+print("Numbers Insert sub 3:" , numbers)
+foods.insert(5, "Cucumber")
+print("Foods Insert sub 5:" , foods)
+del foods[3]
+print("Foods Delete:" , foods)
+removedNumber=numbers.pop()
+print("Pop Last number",numbers)
+print("Popped Number was:", removedNumber)
+numbers.pop(2)
+print("Popped number at sub 2:",numbers)
+print("---------------------- Hands On #3 -----------------------------")
+movies.sort()
+print("Movies Sorted",movies)
+foods.sort()
+print("Foods Sorted",foods)
+print("Numbers Sorted", sorted(numbers))
+print("Numbers Default",numbers)
+movies.reverse()
+print("Reversed Movies", movies)
+
+print("---------------------- Hands On #4 -----------------------------")

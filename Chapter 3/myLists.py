@@ -1,0 +1,18 @@
+bakedGoods=["pretzels","muffins","cheesecake","brownies","cookies","bread"]
+print("Original List",bakedGoods)
+print("List Temp Sorted", sorted(bakedGoods))
+print("List Default Sorted", bakedGoods)
+bakedGoods.reverse()
+print("List Reverse Sorted", bakedGoods)
+bakedGoods.sort()
+print("List Alphabetical Sorted", bakedGoods)
+del bakedGoods[0]
+print("List First deleted", bakedGoods)
+bakedGoods.insert(0,"bread")
+print("List First added", bakedGoods)
+bakedGoods.append("cupcake")
+print("List Last appeneded", bakedGoods)
+bakedGoods.pop(-1)
+print("List Last popped", bakedGoods)
+count=len(bakedGoods)
+print("There are", count,"items on the list")
