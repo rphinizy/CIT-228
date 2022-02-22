@@ -1,0 +1,8 @@
+{
+    "list": "A collection of items in a particular order.",
+    "method": "an action that python can perform on a piece of data",
+    "pop": "Removes the last item in a list.",
+    "slice": "A specified group of items in a list.",
+    "sort": "Arranges a list in order.",
+    "string": "A series of charachters."
+}
