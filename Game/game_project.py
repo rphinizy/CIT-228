@@ -74,23 +74,25 @@ class GameProject:
         """Start game when player clicks play"""
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
         if button_clicked and not self.stats.game_active:
-            #reset the game statistics
-            self.settings.initialize_dynamic_settings()
-            self.stats.reset_stats()
-            self.stats.game_active =True
-            self.sb.prep_score()
-            self.sb.prep_level()
-            self.sb.prep_players()
-            self.sb.prep_high_score()
+            if not self.stats.paused:
+                #reset the game statistics
+                self.settings.initialize_dynamic_settings()
+                self.stats.reset_stats()
+                self.stats.game_active =True
+                self.sb.prep_score()
+                self.sb.prep_level()
+                self.sb.prep_players()
+                self.sb.prep_high_score()
 
-            #Get rid of any remaining aliens and bullets.
-            self.gnomes.empty()
-            self.rainbows.empty()
+                #Get rid of any remaining aliens and bullets.
+                self.gnomes.empty()
+                self.rainbows.empty()
 
-            #create a new fleet and center the ship
-            self._create_army()
-            self.player.center_player()
-
+                #create a new fleet and center the ship
+                self._create_army()
+                self.player.center_player()
+            else:
+                self.stats.game_active =True
             #Hide the mouse cursor.
             pygame.mouse.set_visible(False)
 
@@ -107,6 +109,8 @@ class GameProject:
 
         elif event.key ==pygame.K_p:
                 self.stats.game_active =False
+                self.stats.paused =True
+                pygame.mouse.set_visible(True)
 
         elif event.key==pygame.K_SPACE:
             self._fire_rainbow()
