@@ -12,6 +12,9 @@ class GameStats:
         #high scoe should never be reset.
         self.high_score =0
 
+        #flag for pause button
+        self.paused=False
+
     def reset_stats(self):
         """Initialize statistics that can change during the game"""
         self.players_left =self.settings.player_limit
